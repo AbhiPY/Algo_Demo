@@ -1,0 +1,16 @@
+{% extends "layout.html" %}
+
+
+{% block content %}
+    <div class="row">
+        <div class="col-md-12 text-center">
+            <p style="font-size: larger;">{{title}}</p>
+            <dl>
+                <dt>User ID: {{ user.user_id }}</dt>
+                <dd>Name: {{ user.first_name }} {{ user.last_name }}</dd>
+                <dd>Email ID: {{ user.email }}</dd>
+            </dl>
+            <button><a href="{{ url_for('user') }}">Back</a></button>
+        </div>
+    </div>
+{% endblock %}
